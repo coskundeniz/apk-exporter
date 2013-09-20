@@ -148,7 +148,7 @@ class ApkExporterGui(Frame):
             self.dirname = askdirectory(initialdir='/Users/%s' % os.getlogin(),
                                         title='Select Project Directory')
         else:
-            self.dirname = askdirectory(initialdir='/home/%s' % os.getlogin(),
+            self.dirname = askdirectory(initialdir='/home/%s' % os.environ['USER'],
                                         title='Select Project Directory')
         self.app.dirname = self.dirname
 
